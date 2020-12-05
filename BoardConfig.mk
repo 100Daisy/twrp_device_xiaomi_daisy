@@ -94,6 +94,7 @@ TW_THEME := portrait_hdpi_daisy
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_EXCLUDE_TWRPAPP := true
 
 # Recovery Installer
 USE_RECOVERY_INSTALLER := true
