@@ -96,6 +96,18 @@ TW_INCLUDE_REPACKTOOLS := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_EXCLUDE_TWRPAPP := true
 
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libicuuc \
+    libxml2 \
+    libion \
+    android.hidl.base@1.0
+
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT)/lib64/android.hidl.base@1.0.so
+
 # Recovery Installer
 USE_RECOVERY_INSTALLER := true
 RECOVERY_INSTALLER_PATH := $(LOCAL_PATH)/installer
